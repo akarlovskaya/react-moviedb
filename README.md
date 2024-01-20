@@ -71,6 +71,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 About the App
 
-- Custom Hook (useHomeFetch)
+- Custom hook for Home Page (useHomeFetch)
 - Styled with Styled-components
-- React-router
+- Routing with React Router
+- BreadCrumbs
+- Validate Props with PropTypes
+- SessionStorage
