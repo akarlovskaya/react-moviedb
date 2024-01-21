@@ -8,6 +8,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from '../config';
 // import BreadCrumb from './BreadCrumb';
 import Grid from './Grid';
 import Spinner from './Spinner';
+import BreadCrumb from './BreadCrumb';
 
 // Hook
 import {useMovieFetch} from '../hooks/useMovieFetch';
@@ -21,16 +22,17 @@ const Movie = () => {
     const { movieId } = useParams();
     // rename state -> movie like this state: movie
     const { state: movie, loading, error } = useMovieFetch(movieId);
-
     console.log('movie from API: ', movie);
+    console.log('movie title: ', movie.original_title);
+
+    // if (loading) return <Spinner />
+    // if (error) return <div>Something went wrong...</div>
 
     return (
         <>
-            <div>Movie</div>;
+            <BreadCrumb movieTitle={movie.original_title} />
         </>
     )
-}
-
-
+};
 
 export default Movie;
