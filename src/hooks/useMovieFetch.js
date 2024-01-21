@@ -25,7 +25,7 @@ export const useMovieFetch = movieId => {
                     // same as directors: directors
                     directors
                 });
-
+                setLoading(false);
 
             } catch (error) {
                 setError(true);
